@@ -1,0 +1,261 @@
+@import './components/variables';
+@import './components/mixin';
+
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    padding: 0 15px;
+    margin: 0 auto;
+    max-width: 1140px;
+}
+
+button{
+    border: none;
+    outline: none;
+}
+
+body{
+    font-family: 'Oswald', sans-serif;
+}
+
+// Header
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+
+    &__org{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+    }
+
+    &_button{
+        width: 50px;
+        height: 50px;
+        background-image: url(../images/btn.png) ;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;
+    }
+
+    &__menu-button-wrap{
+        margin-top: 10px;
+    }
+}
+
+
+// Section 1
+
+.section-1{
+    background-image: url(../images/bg.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+
+    &__org{
+        display: flex;
+        position: relative;
+        align-items: center;
+        flex-direction: column;
+    }  
+    
+    &__title{
+        letter-spacing: 2%;
+        @include textAtributes ($colorOne, 64px, 500, 1.5, center);
+        max-width: 734px;
+        margin-top: 192px;
+        margin-bottom: 35px;
+    }
+
+    &__para{
+        @include textAtributes ($colorOne, 18px, 400, 1, center);
+        text-transform: uppercase;
+        margin-bottom: 320px;
+    }
+}
+
+.achievements{
+    background-color: $colorOneNHalf;
+    padding: 57px 0px;
+    min-width: 450px;
+    max-width: 1110px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transform: translateY(50%);
+
+    &__exp{
+        width: 190px;
+    }
+
+    &__exp-title-1{
+        @include textAtributes ($colorFour, 72px, 500, 1.5, center);
+    }
+    
+    &__exp-title-2{
+        @include textAtributes ($colorTwo, 36px, 500, 1.5, center);
+    }
+    
+    &__exp-title-3{
+        @include textAtributes ($colorTwoNHalf, 18px, 500, 1.5, center);
+    }
+}
+
+// Section 2
+
+.section-2__org{
+    padding: 250px 0 110px 0;
+}
+
+.projects{
+
+    &__title{
+    margin: 0 auto;
+    margin-bottom: 60px;
+    }
+
+    &__title{
+        @include textAtributes ($colorTwoNHalf, 36px, 500, 1.5, center);
+        text-transform: uppercase;
+        margin-bottom: 60px;
+    }
+
+    &__items-wrapper{
+        margin: 0 auto;
+        padding: 0 50px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    &__item{
+        width: 300px;
+    }
+
+    &__pic{
+        width: 100%;
+        margin-bottom: 45px;
+    }
+
+    &__line{
+        height: 6px;
+        width: 55px;
+        display: inline-block;
+        background-color: $colorFour;
+        margin-bottom: 15px;
+    }
+
+    &__item-title{
+        @include textAtributes ($colorTwo, 24px, 500, 1.5, left);
+        margin-bottom: 20px;
+    }
+
+    &__item-para{
+        @include textAtributes ($colorTwoNHalf, 16px, 400, 1.5, left);
+        margin-bottom: 40px;
+    }
+}
+
+// Section-3
+
+.section-3{
+    width: 100%;
+    padding: 40px 0px;
+    background-color: $colorFour;
+
+    &__org{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__title-1{
+        @include textAtributes ($colorOne, 48px, 700, 1.5, center);
+        margin-bottom: 20px;
+        letter-spacing: 2%;
+        text-transform: uppercase
+    }
+
+    &__title-2{
+        @include textAtributes ($colorOne, 24px, 700, 1.5, center);
+        letter-spacing: 2%;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+
+    &__btn-wrap{
+        align-self: center;
+        position: relative;
+    }
+
+    &__btn-pic{
+        background: url(../images/mail.png) no-repeat center center;
+        display: inline-block;
+        position: absolute;
+        background-size: contain;
+        width: 18px;
+        height: 15px;
+        left: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__btn{
+        background-color: $colorOne;
+        padding: 14px 30px 14px 63px;
+        @include textAtributes ($colorTwo, 14px, 500, 1.5, center);
+        letter-spacing: 5%;
+        text-transform: uppercase;
+    }
+
+}
+
+// Section 4
+
+.section-4{
+    &__org{
+        padding: 150px 30px;
+    }
+
+    &__title{
+        @include textAtributes ($colorTwo, 36px, 500, 1.5, center);
+        text-transform: uppercase;
+        margin-bottom: 66px;
+    }
+
+    &__items-wrap{
+        vertical-align: top;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    &__item{
+        background-color: $colorOneNHalf;
+        padding: 50px 10px;
+        max-width: 320px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    &__item-pic{
+        width: 60px;
+        height: 40px;
+        margin-bottom: 30px;
+    }
+
+    &__item-title{
+        @include textAtributes ($colorTwo, 21px, 500, 1.5, center);
+        letter-spacing: 2%;
+    }
+}

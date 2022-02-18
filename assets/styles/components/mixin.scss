@@ -1,0 +1,8 @@
+@mixin textAtributes ($color, $fontSize, $fontWeight, $lineHeight, $textAlign) {
+    color: $color;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    line-height: $lineHeight;
+    text-align: $textAlign;
+    vertical-align: top;
+}
